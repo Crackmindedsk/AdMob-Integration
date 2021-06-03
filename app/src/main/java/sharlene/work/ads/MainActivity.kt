@@ -8,14 +8,22 @@ import com.google.android.gms.ads.MobileAds
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var madView: AdView
+    private lateinit var adView: AdView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         MobileAds.initialize(this){}
 
-        madView=findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        madView.loadAd(adRequest)
+        adView=findViewById(R.id.ad_view)
+        val adRequest=AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
+
+
+
 }
+
+
+
